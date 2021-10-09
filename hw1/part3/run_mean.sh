@@ -1,0 +1,1 @@
+hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar -D mapreduce.job.reduces=1 -files map_mean.py,reduce_mean.py -mapper 'python3 ./map_mean.py' -reducer 'python3 ./reduce_mean.py' -input /home/akimov_aa/hw1/AB_NYC_2019.csv -output  /out_mean
