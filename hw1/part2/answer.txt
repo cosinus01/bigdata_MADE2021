@@ -1,0 +1,15 @@
+1. hdfs dfs -mkdir /part2_folder
+2. hdfs dfs -mkdir /part2_folder/sub_folder
+4. hdfs dfs -touchz /part2_folder/sub_folder/file.txt
+5. hdfs dfs -rm /part2_folder/sub_folder/file.txt
+6. hdfs dfs -rm -r /part2_folder
+
+1. hdfs dfs -put /test.py /part2_folder
+2. hdfs dfs -cat /part2_folder/test.py
+3. hdfs dfs -cat /part2_folder/test.py | tail -2
+4. hdfs dfs -cat /part2_folder/test.py | head -2
+5. hdfs dfs -cp /part2_folder/test.py /part2_folder_1/test2.py
+
+2. hdfs dfs -setrep -w 2 /part2_folder/test.py # довольно долго
+3. hdfs fsck /part2_folder -files -blocks -locations 
+4. hdfs fsck -blockId blk_1073741843
